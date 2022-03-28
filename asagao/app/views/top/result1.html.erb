@@ -1,0 +1,8 @@
+<h1>親のターン</h1>
+
+<h2>
+  <p>出目</p>
+</h2>
+<p><%= @deme[0] %> ・ <%= @deme[1] %> ・ <%= @deme[2] %></p>
+<p></p>
+<%= button_to "役を見る", { controller: 'top', action: 'game2' }, { method: :get } %>

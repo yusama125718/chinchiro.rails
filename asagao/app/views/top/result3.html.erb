@@ -1,0 +1,8 @@
+<h1> <%= @player %> のターン </h1>
+
+<h2>
+  出目
+</h2>
+<p><%= @deme[0] %> ・ <%= @deme[1] %> ・ <%= @deme[2] %></p>
+<p></p>
+<%= button_to "役を見る", { controller: 'top', action: 'game4' }, { method: :get } %>
