@@ -6,20 +6,21 @@
   親(CPU)
 </h2>
 <p>出目</p>
-<p><%= @pdeme[0] %> ・ <%= @pdeme[1] %> ・ <%= @pdeme[2] %></p>
+<p>　<%= @pdeme[0] %> ・ <%= @pdeme[1] %> ・ <%= @pdeme[2] %></p>
 <p></p>
 <p>役</p>
-<p><%= @pyakuname %></p>
+<p>　<%= @pyakuname %></p>
 <p></p>
-<h2><%= @player %></h2>
+<h2>子(<%= @player %>)</h2>
 <p>出目</p>
-<p><%= @cdeme[0] %> ・ <%= @cdeme[1] %> ・ <%= @cdeme[2] %></p>
+<p>　<%= @cdeme[0] %> ・ <%= @cdeme[1] %> ・ <%= @cdeme[2] %></p>
 <p></p>
 <p>役</p>
-<p><%= @cyakuname %></p>
+<p>　<%= @cyakuname %></p>
 <p></p>
 <h2>
   <p>勝者</p>
-  <p><%= @winner %>！(倍率:<%= @value %>倍)</p>
+  <p><%= @winner %></p>
 </h2>
-<%= button_to "もう１度やる！", { controller: 'top', action: 'index' }, {method: :root } %>
+<p>(倍率:<%= @value %>倍)</p>
+<%= button_to "もう１度やる！", { controller: 'top', action: 'index' }, {method: :get } %>

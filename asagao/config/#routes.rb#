@@ -12,6 +12,5 @@ Rails.application.routes.draw do
   get "game/result4" => "top#result4", as: "result4"
   get "game/result40" => "top#result40", as: "result40"
   get "finish" => "top#finish"
-  get "reset" => "top#reset"
   get "error" => "top#error", as: "error"
 end

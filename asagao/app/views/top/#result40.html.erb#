@@ -10,3 +10,4 @@
 </h2>
 <p></p>
 <%= button_to "もう一度振る！現在#{@roll}/3回", { controller: 'top', action: 'game3' }, {method: :get } %>
+x
