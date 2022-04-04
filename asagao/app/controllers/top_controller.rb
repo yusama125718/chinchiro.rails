@@ -1,5 +1,6 @@
 class TopController < ApplicationController
   def index
+    @notice = session[:notice]
     reset_session
     flash[:system] = true
   end
@@ -77,10 +78,12 @@ class TopController < ApplicationController
 
   def game
     if params[:p].length > 10
-      redirect_to "/", flash: {notice: "名前は10文字以下にしてください"}
+      session[:notice] = "名前は10文字以下にしてください"
+      redirect_to "/"
       return
     elsif params[:p] == ""
-      redirect_to "/", flash: {notice: "名前を入力してください"}
+      session[:notice] = "名前を入力してください"
+      redirect_to "/"
       return
     end
     session[:roll] = 0

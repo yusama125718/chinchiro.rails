@@ -1,12 +1,15 @@
-<h1><%= @player %>のターン</h1>
-
-<h2>
-  <p>出目</p>
-</h2>
-<p><%= @deme[0] %> ・ <%= @deme[1] %> ・ <%= @deme[2] %>
-<p></p>
-<h2>
-  <p><%= @cyakuname %>！</p>
-</h2>
-<p></p>
-<%= button_to "もう一度振る！現在#{@roll}/3回", { controller: 'top', action: 'game3' }, {method: :get } %>
+</head>
+<body>
+  <h1><%= @player %>のターン</h1>
+  
+  <h2>
+    <p>出目</p>
+  </h2>
+  <p><%= @deme[0] %> ・ <%= @deme[1] %> ・ <%= @deme[2] %>
+  <p></p>
+  <h2>
+    <p><%= @cyakuname %>！</p>
+  </h2>
+  <p></p>
+  <%= button_to "もう一度振る！現在#{@roll}/3回", { controller: 'top', action: 'game3' }, {method: :get } %>
+</body>

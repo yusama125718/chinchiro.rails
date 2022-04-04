@@ -1,7 +1,12 @@
-<h1>チンチロ</h1>
-<font color="red"><%= flash[:notice] %></font>
-<%= form_with url: "game" do |form| %>
-  <%= form.label "player1" %>
-  <%= form.text_field :p %>
-  <%= form.submit "Play" %>
-<% end %>
+</head>
+<body>
+  <div class="top">
+    <h1>チンチロ</h1>
+    <font color="red"><%= @notice %></font>
+    <%= form_with url: "game" do |form| %>
+    <%= form.label "player1" %>
+    <%= form.text_field :p %>
+    <%= form.submit "Play" %>
+    <% end %>
+</div>
+</body>
