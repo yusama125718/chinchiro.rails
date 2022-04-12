@@ -21,12 +21,12 @@ const d2 = document.getElementById('d2');
 const d3 = document.getElementById('d3');
 
 function roll(){
-    document.getElementById("d").style.display ="none";
-    document.getElementById("d1").style.display ="none";
-    document.getElementById("d2").style.display ="none";
-    document.getElementById("d3").style.display ="none";
-    document.getElementById("button").style.display ="none";
-    stun(1);
+    d.style.display ="none";
+    d1.style.display ="none";
+    d2.style.display ="none";
+    d3.style.display ="none";
+    button.style.display ="none";
+    stun();
     sleep(3,fd);
 }
 
@@ -39,26 +39,29 @@ function fd1(){
     sleep(1,fd2);
 }
 function fd2(){
-    d2.style.display = "block";
+    d1.innerHTML = d1.textContent + d2.textContent;
     sleep(1,fd3);
 }
 function fd3(){
-    d3.style.display = "block";
+    d1.innerHTML = d1.textContent + d3.textContent;
     sleep(1,fbutton);
 }
 function fbutton(){
     button.style.display = "block";
 }
 
-function stun(time){
-    document.getElementById('droll').innerHTML = "ダイスを振っています.";
+function stun(){
+    let droll = document.getElementById('droll');
+    droll.innerHTML = "ダイスを振っています.";
     var id = setInterval(function () {
-        document.getElementById('droll').innerHTML = "ダイスを振っています..";
+        droll.innerHTML = "ダイスを振っています..";
         var id = setInterval(function () {
-            document.getElementById('droll').innerHTML = "ダイスを振っています...";
+            droll.innerHTML = "ダイスを振っています...";
+            var id = setInterval(function () {
+                droll.style.display = "none";
+            }, 1000);
         }, 1000);
     }, 1000);
 }
 
 roll();
-

@@ -1,11 +1,22 @@
+  <%= javascript_include_tag "top.js" %>
 </head>
 <body>
   <h1> <%= @player %> のターン </h1>
-  
+
   <h2>
-    出目
+    <div id="droll"></div>
   </h2>
-  <p><%= @deme[0] %> ・ <%= @deme[1] %> ・ <%= @deme[2] %></p>
+  <div id="d">
+    <h2>
+      <p>出目</p>
+    </h2>
+    <p>
+      <div id="d1" style="display: inline-block; _display: inline;"><%= @deme[0] %></div><div id="d2" style="display: inline-block; _display: inline;"> ・ <%= @deme[1] %></div><div id="d3" style="display: inline-block; _display: inline;"> ・ <%= @deme[2] %></div>
+    </p>
+  </div>
   <p></p>
-  <%= button_to "役を見る", { controller: 'top', action: 'game4' }, { method: :get } %>
+  <div id="button">
+    <%= button_to "役を見る", { controller: 'top', action: 'game4' }, { method: :get } %>
+  </div>
 </body>
+
