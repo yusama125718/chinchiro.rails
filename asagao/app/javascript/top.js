@@ -17,14 +17,26 @@ function sleep(waitMSec, callbackFunc) {
 const button = document.getElementById('button');
 const d = document.getElementById('d');
 const d1 = document.getElementById('d1');
+d1.innerHTML = "<img src="/1.png" alt="1">";
 const d2 = document.getElementById('d2');
+d2.innerHTML = "<img src="/2.png" alt="2">";
 const d3 = document.getElementById('d3');
+d3.innerHTML = "<img src="/3.png" alt="3">";
+const d4 = document.getElementById('d4');
+d4.innerHTML = "<img src="/4.png" alt="4">";
+const d5 = document.getElementById('d5');
+d5.innerHTML = "<img src="/5.png" alt="5">";
+const d6 = document.getElementById('d6');
+d6.innerHTML = "<img src="/6.png" alt="6">";
 
 function roll(){
     d.style.display ="none";
     d1.style.display ="none";
     d2.style.display ="none";
     d3.style.display ="none";
+    d4.style.display ="none";
+    d5.style.display ="none";
+    d6.style.display ="none";
     button.style.display ="none";
     stun();
     sleep(3,fd);
