@@ -1,15 +1,45 @@
-</head>
-<body>
-  <h1>親のターン</h1>
-  
-  <h2>
-    <p>出目</p>
-  </h2>
-  <p><%= @deme[0] %> ・ <%= @deme[1] %> ・ <%= @deme[2] %></p>
-  <p></p>
-  <h2>
-    <p><%= @pyakuname %>！</p>
-  </h2>
-  <p></p>
-  <%= button_to "もう一度振る！現在#{@roll}/3回", { controller: 'top', action: 'game1' }, {method: :get } %>
-</body>
+<h1>親のターン</h1>
+
+<h2>
+  <p>出目</p>
+</h2>
+<p><div id="d<%= @deme[0] %>"></div><div id="d<%= @deme[1] %>"></div><div id="d<%= @deme[2] %>"></div></p>
+<p></p>
+<h2>
+  <p><%= @pyakuname %>！</p>
+</h2>
+<p></p>
+<%= button_to "もう一度振る！現在#{@roll}/3回", { controller: 'top', action: 'game1' }, {method: :get } %>
+
+<script>
+  try {
+      document.getElementById('d1').innerHTML = '<%= image_tag "1.png" %>';
+  } catch(e) {
+      console.log( e.message );
+  }
+  try {
+      document.getElementById('d2').innerHTML = '<%= image_tag "2.png" %>';
+  } catch(e) {
+      console.log( e.message );
+  }
+  try {
+      document.getElementById('d3').innerHTML = '<%= image_tag "3.png" %>';
+  } catch(e) {
+      console.log( e.message );
+  }
+  try {
+      document.getElementById('d4').innerHTML = '<%= image_tag "4.png" %>';
+  } catch(e) {
+      console.log( e.message );
+  }
+  try {
+      document.getElementById('d5').innerHTML = '<%= image_tag "5.png" %>';
+  } catch(e) {
+      console.log( e.message );
+  }
+  try {
+      document.getElementById('d6').innerHTML = '<%= image_tag "6.png" %>';
+  } catch(e) {
+      console.log( e.message );
+  }
+</script>

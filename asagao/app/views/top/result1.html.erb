@@ -1,21 +1,18 @@
-  <%= javascript_include_tag "top.js" %>
-</head>
-<body>
-  <h1>親のターン</h1>
+<%= javascript_include_tag "top.js" %>
+<h1>親のターン</h1>
+<h2>
+  <div id="droll"></div>
+</h2>
+<div id="d">
   <h2>
-    <div id="droll"></div>
+    <p>出目</p>
   </h2>
-  <div id="d">
-    <h2>
-      <p>出目</p>
-    </h2>
-    <p>
-      <div id="d<%= @deme[0] %>"></div><div id="d<%= @deme[1] %>"></div><div id="d<%= @deme[2] %>"></div>
-    </p>
-  </div>
-  <p></p>
-  <div id="button">
-    <%= button_to "役を見る", { controller: 'top', action: 'game2' }, { method: :get } %>
-  </div>
-</body>
+  <p>
+    <div id="d<%= @deme[0] %>"></div><div id="d<%= @deme[1] %>"></div><div id="d<%= @deme[2] %>"></div>
+  </p>
+</div>
+<p></p>
+<div id="button">
+  <%= button_to "役を見る", { controller: 'top', action: 'game2' }, { method: :get } %>
+</div>
 
